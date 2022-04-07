@@ -33,7 +33,7 @@ public class HttpController {
 
     @RequestMapping("/test/**")
     public void sayHello(HttpServletRequest request, HttpServletResponse response) {
-        System.out.println(request.getQueryString());
+        logger.info(request.getQueryString());
         response.setHeader("refresh", "5;url=https://www.baidu.com");
 
     }
